@@ -21,19 +21,18 @@
   
   <style>
     * { margin: 0; padding: 0; }
-    body { background-color: #f8f8f8; }
+    body { background-color: #f8f8f8; color: #151515 }
     .bd-placeholder-img { font-size: 1.125rem; text-anchor: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
-    .intro-banner-container { height: 200px; margin-top: 100px;  text-align: center; }
+    .intro-banner-container { height: 260px; margin-top: 100px;  text-align: center; }
     .join-white__text { font-weight: bold; font-size: 50px; line-height: 1}
     .mobile-img__screenshots { margin-top: 300px; margin-bottom: 50px; display: flex; flex-direction: row; justify-content: center; align-items: center; }
     .app-screenshot-container{margin-left: 16px; margin-right: 16px}
-    .app-features-image{ width: 400px;}
-    .app-screenshot{
-      max-width: 280px;
-      
-    }
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg { font-size: 3.5rem; }
+    .app-features-image{ max-width: 400px;}
+    .app-screenshot{ max-width: 280px; }
+  
+    @media (max-width:640px) { 
+      .app-screenshot-hide{display: none}
+      .app-screenshot{ max-width: 400px; }
     }
 
   </style>
@@ -46,12 +45,14 @@
 <!-- HERO -->
   <div class="container-fluid intro-banner-container">
     <div class="container col-md-12 col-sm-12">
-        <img src="./assets/logo@2x.png" draggable="false" style="width: 120px;" />
-        <h1 class="font-weight-normal"><span style="font-weight:700">Owasso</span>App</h1>
+        <div style="height: 200px">
+          <img src="./assets/logo@2x.png" draggable="false" style="width: 120px;" />
+          <h1 class="font-weight-normal"><span style="font-weight:700">Owasso</span>App</h1>
+        </div>
         <h1 class="join-white__text">Join The Conversation</h1>
         <h3  line-height: 1>A place for the community</h3>
-        <a class="btn btn-primary btn-lg" style="background-color: #0366d6 !important; border:#0366d6" href="#" role="button">🎉 Coming soon 🎉</a>
-        <div style="margin-top: 30px;">
+        <span class="btn btn-primary btn-lg" style="background-color: #0366d6 !important; border:#0366d6" href="#" role="button">🎉 Coming soon 🎉</span>
+        <div style="margin-top: 60px;">
           <img src="./assets/app_store.png" draggable="false" style="width: 100%; max-width: 165px" />
           <img src="./assets/google_play.png" draggable="false" width="165" />
         </div>
@@ -61,23 +62,23 @@
   <div class="container-fluid mobile-img__screenshots">
     
     <div class="app-screenshot-container">
-      <img class="app-screenshot" src="./assets/police@2x.png">
+      <img class="app-screenshot app-screenshot-hide" draggable="false" src="./assets/police@2x.png">
     </div>
 
     <div class="app-screenshot-container">
-      <img class="app-screenshot" src="./assets/notifications@2x.png">
+      <img class="app-screenshot app-screenshot-hide" draggable="false" src="./assets/notifications@2x.png">
     </div>
     
     <div class="app-screenshot-container">
-      <img class="app-screenshot" src="./assets/explore@2x.png">
+      <img class="app-screenshot" draggable="false" src="./assets/explore@2x.png">
     </div>
 
     <div class="app-screenshot-container">
-      <img class="app-screenshot" src="./assets/garage_sales@2x.png">
+      <img class="app-screenshot app-screenshot-hide" draggable="false" src="./assets/garage_sales@2x.png">
     </div>
 
     <div class="app-screenshot-container">
-      <img class="app-screenshot" src="./assets/community@2x.png">
+      <img class="app-screenshot app-screenshot-hide" draggable="false" src="./assets/community@2x.png">
     </div>
 
   </div>
@@ -85,32 +86,34 @@
 
 <!-- BOTTOM CALL TO ACTION -->
   <div class="container-fluid" style="margin-top: 100px !important; padding: 0 !important;">
-    <div class="row" style="display: flex; justify-content:center; align-self: center;">
-        <div class="col-md-6 col-sm-12 col-xs-12" style="display: flex; justify-content:center; align-self: center;">
-          <div class="app-features-image">
-              <img class="app-features-image" src="./assets/notifications@2x.png">
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+          <div class="app-features-image" style="margin: 0 auto;">
+              <img class="app-features-image" draggable="false" src="./assets/notifications@2x.png">
           </div>
         </div>
       <div class="col-md-6 col-sm-12 col-xs-12" style="justify-content:center; align-self: center;">
-        <div style="display: flex; padding-bottom: 50px; justify-content:center; align-self: center;">
+        <div style="display: flex; padding-bottom: 50px; justify-content:center; align-self: center; padding: 16px; margin-top: 16px">
           <div class="col-md-12">
-            <img src="./assets/logo@2x.png" draggable="false" style="width: 165px;" />      
+            <img src="./assets/logo@2x.png" draggable="false" style="width: 120px;" />   
             <h1 class="font-weight-normal"><span style="font-weight:700">Owasso</span>App</h1>
             <p>A online community, schools, local services, jobs, churches, homes and more.</p>
             <h2 style="font-weight:700">Schools</h2>
             <h2 style="font-weight:700">Push Notifications</h2>
             <h2 style="font-weight:700">Police Incidents</h2>
             <h2 style="font-weight:700">Community Topics</h2>
-            <h2 style="font-weight:700">Homes Sale or Rent</h2>
+            <h2 style="font-weight:700">Homes</h2>
             <h2 style="font-weight:700">Jobs</h2>
             <h2 style="font-weight:700">Churches</h2>
             <h2 style="font-weight:700">Local Services</h2>
           </div>
         </div>
         <hr class="my-4">
-        <a class="btn btn-primary btn-lg" style="background-color: #0366d6 !important; border:#0366d6" href="#" role="button">🎉 Coming soon 🎉</a>
-        <img src="./assets/app_store.png" draggable="false" style="width: 100%; max-width: 165px" />
-        <img src="./assets/google_play.png" draggable="false" width="165" />
+        <div style="margin: 16px">
+          <span class="btn btn-primary btn-lg" style="background-color: #0366d6 !important; border:#0366d6" href="#" role="button">🎉 Coming soon 🎉</span>
+          <img src="./assets/app_store.png" draggable="false" style="width: 100%; max-width: 165px" />
+          <img src="./assets/google_play.png" draggable="false" width="165" />
+        </div>
       </div>
     </div>
   </div>
@@ -120,7 +123,7 @@
   <footer class="container">
     <div class="row" style="height: 200px; margin-top: 50px;">
       <div class="col-md-2">
-        <p><small class="d-block mb-3 text-muted">&copy; OwassoApp 2019 | var soft; </small></p>
+        <p><small class="d-block mb-3 text-muted">&copy; OwassoApp 2019 | <a style="color: #0366d6" href="https://variablesoft.dev/">var soft;</a> </small></p>
       </div>
     </div>
   </footer>
